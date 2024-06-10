@@ -24,7 +24,8 @@
                 $('#cidade').val(json.localidade)
                 $('#uf').val(json.uf)
             }
-        }
+        },error:function(request,error){
+            alert('erro ao se conectar com api')
     })
 })
 
