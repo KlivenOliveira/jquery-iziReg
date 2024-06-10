@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IziReg</title>
+    <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="reset.css"></link>
+</head>
+    <header class="cabecalho">
+        <h1 class="cabecalho__logo-inicio">Izi<span class="cabecalho__logo-final">Reg</span></h1>
+        <ul class="cabecalho__menu">
+            <li class="cabecalho__menu-item">
+                <a href="index.html" class="cabecalho__menu-link">Principal</a>
+            </li>
+    
+            <li class="cabecalho__menu-item">
+                <a  href="#" class= "cabecalho__menu-link">Servicos</a>
+            </li>
+    
+            <li>
+                <input type="search" class="cabecalho__pesquisa" placeholder="Pesquise aqui">
+            </li>
+    
+            <li class="cabecalho__menu-item">
+                <a href="formulario.html" class="cabecalho__menu-link" style="border:4px solid red;border-radius: 20px; background-color: rgb(215, 250, 241);font-size:22px;padding:5px 4px;" >Cadastrar</a>
+            </li>
+    
+            <li class="cabecalho__menu-item">
+                <a class="cabecalho__menu-link">Acessar</a>
+            </li>
+        </ul>
+      
+    </header>
+    
+    <section class="banner__formulario">
+        <h3 class="banner__titulo">
+             Registro de colaboradores
+        </h3>
+    </section>
+
+    <main class="container">
+        <ul class="breadcrumb">
+            <li class="breadcrumb__pagina">Inicio</li>
+            <li class="breadcrumb__pagina">Abrir conta</li>
+        </ul>
+
+    <section class="formulario">   
+        <div class="formulario__container">
+            <h2 class="formulario__container-texto">Preencha os campos para cadastrar um colaborador</h2>
+        </div>
+
+    <form class="principal__formulario" data-formulario>
+        <fieldset class="formulario__campo">
+            <label class="formulario__etiqueta" for="Nome">Nome</label>
+            <input class="formulario__escrita"  minlength="3" required  name="nome" id="nome" type="text"></input>
+            <span class="mensagem-erro"></span>
+            <span class="mensagem-acerto"></span>
+        </fieldset>
+
+    <form class="principal__formulario">
+    <fieldset class="formulario__campo">
+        <label class="formulario__etiqueta" for="Email">Email</label>
+        <input class="formulario__escrita"  required minlength="4" id="email" name="email" type="email"></input>
+        <span class="mensagem-erro"></span>
+    </fieldset>
+
+    <form class="principal__formulario">
+        <fieldset class="formulario__campo">
+            <label class="formulario__etiqueta" for="RG">RG</label>
+            <input class="formulario__escrita"  minlength="4" maxlength="10" required name="rg" id="RG" type="text"></input>
+            <span class="mensagem-erro"></span>
+        </fieldset>
+
+    <form class="principal__formulario">
+        <fieldset class="formulario__campo">
+            <label class="formulario__etiqueta" for="CPF">CPF(Apenas números)</label>
+            <input class="formulario__escrita" type="text"  required   minlength="3" maxlength="14" id="cpf" name="cpf"></input>
+            <span class="mensagem-erro"></span>
+        </fieldset>
+    
+    <form class="principal__formulario">
+        <fieldset class="formulario__campo">
+            <label class="formulario__etiqueta">Data de Nascimento</label>
+            <input class="formulario__escrita"   required name="aniversario" id="aniversario" type="date"></input>
+            <span class="mensagem-erro"></span>
+        </fieldset>
+  
+                
+            </fieldset>
+
+            <div>
+                <input value="Avançar" class="formulario__botao" id="enviar" data-botao-enviar type="submit">
+                <span class="mensagem-erro"></span>
+            </div>
+        </form>
+
+        </section> 
+    </form>
+    </main>
+    <footer class="rodape">
+    </section>
+    <section class="rodape__contato">
+    </section>
+    <section class="rodape__redes-sociais">
+        <h2 class="rodape__titulo">Acesse nossas redes</h2>
+        <ul class="rodape__lista redes-sociais__lista">
+            <li><img src="imagens/Facebook.png" alt="ícone do facebook"></li>
+            <li><img src="imagens/Youtube.png" alt="ícone do youtube"></li>
+            <li><img src="imagens/Whatsapp.png" alt="ícone do whatsapp"></li>
+            <li><img src="imagens/Instagram.png" alt="ícone do instagram"></li>
+        </ul>
+        <h2 class="rodape__logo"><span class="rodape__logo--negrito">Izi</span>Reg</h2>
+    </section>
+</footer>
+</body>
+<script src="jquery-3.7.1.min.js"></script>
+<script src="main.js"></script>  //Here you can write your custom js with jquery loaded first
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+
+<script
+
+
+</html>
