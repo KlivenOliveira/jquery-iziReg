@@ -1,4 +1,6 @@
 
+    
+    
     $(document).ready(function(){
         $("#rua").val("");
         $("#bairro").val("")
@@ -6,9 +8,20 @@
         $("uf").val("")
     })
 
+    $("#cep").on('keyup',function(){
+        var campoCep = $('#cep')
+        var input = $('#cep').val().length
+        console.log(input);
+        if (input == 5){
+            campoCep.val((campoCep.val()+'-'))
+        }
+    })
+
     $("#consultabotao").on('click',e =>{
         var cep = $('#cep').val().replace(/\D/g, '');
         const url = "https://viacep.com.br/ws/" + cep +"/json/"
+        var erro = $('#erroCep');
+        erro.innerHTML =""
         $("#rua").val("...");
         $("#bairro").val("...");
         $("#cidade").val("...");
@@ -17,15 +30,30 @@
         $.ajax({
             type:"GET",
             url:url,
-            success:function(json){
-            if(json.logradouro){
-                $('#rua').val(json.logradouro)
-                $('#bairro').val(json.bairro)
-                $('#cidade').val(json.localidade)
-                $('#uf').val(json.uf)
+            success:function(e){
+            if(e.logradouro){
+                $('#rua').val(e.logradouro)
+                $('#bairro').val(e.bairro)
+                $('#cidade').val(e.localidade)
+                $('#uf').val(e.uf)
+            }else{
+                $('#rua').val('')
+                $('#bairro').val('')
+                $('#cidade').val('')
+                $('#uf').val('')
+                $('#cep').val('')
+               
+                
+                $('#erroCep').removeClass('Desaparecer')
+                $('#erroCep').addClass('Aparecer')
+
             }
+        
+            
+          
         },error:function(request,error){
-            alert('erro ao se conectar com api')
+            alert( JSON.stringify(request) +' erro ao se conectar com api ' +JSON.stringify(error))
+        }
     })
 })
 
