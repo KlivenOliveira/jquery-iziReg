@@ -52,8 +52,8 @@
         <form class="principal__formulario" data-formulario2>
             
                 <label class="formulario__etiqueta">CEP</label>
-                <input class="formulario__escrita" value=""  maxlength="11"  required name="cep" id="cep" type="text"/></input>
-                <span class="mensagem-erro"></span>
+                <input class="formulario__escrita" value=""  maxlength="9"  required name="cep" id="cep" type="text"/></input>
+                <span id="erroCep" mensagem-erro" class="Desaparecer">Cep invalido, tente novamente</span>
         
                     <label class="formulario__etiqueta"><br>Rua</label>
                     <input type="text" id="rua" class="formulario__escrita" name="rua" />
@@ -89,9 +89,6 @@
     </li>
     </ul>
  
-
-
-
 
     
     <footer class="rodape">
