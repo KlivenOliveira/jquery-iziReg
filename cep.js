@@ -36,6 +36,7 @@
                 $('#bairro').val(e.bairro)
                 $('#cidade').val(e.localidade)
                 $('#uf').val(e.uf)
+                $('#erroCep').removeClass('Desaparecer')
             }else{
                 $('#rua').val('')
                 $('#bairro').val('')
@@ -52,7 +53,7 @@
             
           
         },error:function(request,error){
-            alert( JSON.stringify(request) +' erro ao se conectar com api ' +JSON.stringify(error))
+            alert('erro ao se conectar com api'))
         }
     })
 })
