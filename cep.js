@@ -53,7 +53,7 @@
             
           
         },error:function(request,error){
-            alert('erro ao se conectar com api'))
+            alert(error,'erro ao se conectar com api',request)
         }
     })
 })
