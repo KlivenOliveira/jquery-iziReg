@@ -36,7 +36,7 @@
                 $('#bairro').val(e.bairro)
                 $('#cidade').val(e.localidade)
                 $('#uf').val(e.uf)
-                $('#erroCep').removeClass('Desaparecer')
+                $('#erroCep').addClass('Desaparecer')
             }else{
                 $('#rua').val('')
                 $('#bairro').val('')
