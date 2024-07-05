@@ -5,6 +5,10 @@
 }
 
 
+.input-error{
+    outline: 1px solid red;
+  }
+
 
 .Aparecer{
     display: flex;
